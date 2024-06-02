@@ -111,7 +111,32 @@ namespace Var15.Windows
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
+            MessageBoxResult result = MessageBox.Show("Вы уверены, что хотите удалить работника", "Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
 
+                if (listviewWorker.SelectedItem != null)
+                {
+                    VW_Worker_T worker = listviewWorker.SelectedItem as VW_Worker_T;
+
+                    Password password = Context.Password.ToList().Where(i => i.IdPassword == worker.IdPassword).FirstOrDefault();
+                    Context.Password.Remove(password);
+                    Context.SaveChanges();
+                    Worker worker1 = Context.Worker.ToList().Where(i => i.IdWorker == worker.IdWorker).FirstOrDefault();
+                    Context.Worker.Remove(worker1);
+                    Context.SaveChanges();
+                    Education education = Context.Education.ToList().Where(i => i.IdWorker == worker.IdWorker).FirstOrDefault();
+                    Context.Education.Remove(education);
+                    Context.SaveChanges();
+                    listviewWorker.ItemsSource = Context.VW_Worker_T.ToList();
+                }
+                else
+                {
+                    MessageBox.Show("Выделите запись, которую хотите удалить");
+                    return;
+                }
+
+            }
         }
     }
 }
