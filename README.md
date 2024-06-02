@@ -1,4 +1,32 @@
 ![image](https://github.com/Leralera050505/Var15/assets/107068589/71e3f249-dd98-4acd-a964-df055188ea0f)
+
+Картинка и заглушка
+                            <Image x:Name="DTImage"
+                               Height="170"
+                               Width="200">
+                                <Image.Source>
+                                    <Binding Path="Photo">
+                                        <Binding.TargetNullValue>
+                                            <ImageSource>C:\Users\IMac1\Desktop\CoffeHauseAksBel\CoffeHause\Res\no_photo.jpg</ImageSource>
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </Image.Source>
+                            </Image>
+
+ string pathPhoto; (перед иницилизацией)
+private void btnselect_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog OFD = new OpenFileDialog();
+            if(OFD.ShowDialog() == true)
+            {
+                ProductImg.Source = new BitmapImage(new Uri(OFD.FileName));
+
+                pathPhoto = OFD.FileName;
+            }
+        }
+Сохранение картинки btnSave -----> product.Photo = File.ReadAllBytes(pathPhoto);
+
+
 TEST
 
 Решение - проект модульного теста - пишем
