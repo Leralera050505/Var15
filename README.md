@@ -1,4 +1,6 @@
 ![image](https://github.com/Leralera050505/Var15/assets/107068589/71e3f249-dd98-4acd-a964-df055188ea0f)
+![image](https://github.com/Leralera050505/Var15/assets/107068589/408564a3-eba0-498d-9fa9-c5f40e7ade1f)
+![image](https://github.com/Leralera050505/Var15/assets/107068589/b3726aea-3e75-4317-9186-c528b55bc978)
 
 Картинка и заглушка
                             < Image x:Name="DTImage"
