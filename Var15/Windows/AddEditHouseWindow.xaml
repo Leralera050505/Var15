@@ -1,0 +1,35 @@
+﻿<Window x:Class="Var15.Windows.AddEditHouseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Var15.Windows"
+        mc:Ignorable="d"
+        Title="AddEditHouseWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+
+            <ComboBox x:Name="cmbStreet"
+                      Width="250"
+Height="40"/>
+            <TextBox x:Name="TbNumber"
+                     Width="250"
+Height="40"/>
+            <ComboBox x:Name="cmbComplex"
+                      Width="250"
+Height="40"/>
+            <TextBox x:Name="TbAdding"
+                     Width="250"
+Height="40"/>
+            <TextBox x:Name="TbCost"
+                     Width="250"
+Height="40"/>
+            <Button x:Name="btnSave"
+                    Width="250"
+Height="40" Click="btnSave_Click"/>
+            <Button x:Name="btnExit"
+                    Width="250"
+                    Height="40" Click="btnExit_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
